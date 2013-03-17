@@ -20,13 +20,13 @@ public class Log {
 	}
 	
 	public String write(Integer prioority){
-		String result = "";
+		String result = "/";
 		for(Filter next : _filters){
-			
-			result += next.write(prioority);
+			String temp = next.write(prioority);
+			result += temp.equals("")? "" : next.write(prioority) + "/";
 		
 		}
-		return result;
+		return result.substring(0, result.length()-1);
 	}
 	
 	public void add(Filter filter){
