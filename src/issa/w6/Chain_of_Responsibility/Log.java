@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Log {
 	
-	private List<LogFilter> _filters;
+	private List<Filter> _filters;
 	
 	public Log(){
 		_filters = new ArrayList<>();
@@ -21,7 +21,7 @@ public class Log {
 	
 	public String write(Integer prioority){
 		String result = "";
-		for(LogFilter next : _filters){
+		for(Filter next : _filters){
 			
 			result += next.write(prioority);
 		
@@ -29,11 +29,11 @@ public class Log {
 		return result;
 	}
 	
-	public void add(LogFilter filter){
+	public void add(Filter filter){
 		_filters.add(filter);
 	}
 	
-	public void remove(LogFilter filter){
+	public void remove(Filter filter){
 		_filters.remove(filter);
 	}
 }

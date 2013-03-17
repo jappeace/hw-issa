@@ -8,25 +8,10 @@ package issa.w6.Chain_of_Responsibility;
  *
  * @author jappie
  */
-public class Filter extends LogFilter{
-	private Integer _threshold;
-	private String _message;
-	/**
-	 * 
-	 * @param threshold
-	 * @param message the message when this filter is used
-	 */
-	public Filter(Integer threshold, String message){
-		_threshold = threshold;
-		_message = message;
+public abstract class Filter {
+	private Filter _next;
+	public abstract String write(Integer prioority);
+	protected String callNext(Integer prioority){
+		return _next.write(prioority);
 	}
-
-	@Override
-	public String write(Integer prioority) {
-		if(prioority > _threshold){
-			return _message;
-		}
-		return "";
-	}
-	
 }
