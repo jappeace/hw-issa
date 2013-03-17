@@ -8,7 +8,7 @@ package issa.w6.Chain_of_Responsibility;
  *
  * @author jappie
  */
-public class LogFilter extends Filter{
+public class LogFilter implements Filter{
 	private Integer _threshold;
 	private String _message;
 	/**
