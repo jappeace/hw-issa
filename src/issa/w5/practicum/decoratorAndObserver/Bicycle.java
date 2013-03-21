@@ -10,12 +10,6 @@ package issa.w5.practicum.decoratorAndObserver;
  */
 public class Bicycle extends Part {
 	
-	
-	@Override
-	public String toString(){
-		return this.getParts();
-		
-	}
 
 	@Override
 	public String getParts() {

@@ -34,6 +34,6 @@ public class ExtraPart extends Part{
 	public String toString(){
 		String parent = _parent.toString();
 		int cutoffsize = 1, cutoffLength = parent.length()-cutoffsize;
-		return parent.substring(0, cutoffLength) +"{"+ super.toString()+"}"+parent.substring(cutoffLength, cutoffLength+cutoffsize);
+		return parent +"{"+ super.toString().replace(parent, "") +"}";
 	}
 }
