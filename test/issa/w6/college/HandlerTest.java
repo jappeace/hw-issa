@@ -55,10 +55,10 @@ public class HandlerTest {
 		man.setSucessor(dir);
 		dir.setSucessor(pres);
 		
-		assertEquals("issa.w6.college.Manager handles", man.HandleRequest(10));
-		assertEquals("issa.w6.college.Director handles", man.HandleRequest(9999));
-		assertEquals("issa.w6.college.President handles", man.HandleRequest(99999));
-		assertEquals("issa.w6.college.Emporer handles", man.HandleRequest(9999999));
-		assertEquals("issa.w6.college.Emporer handles", man.HandleRequest(Integer.MAX_VALUE));
+		assertEquals("issa.w6.college.chainOfResponsibility.Manager handles", man.HandleRequest(10));
+		assertEquals("issa.w6.college.chainOfResponsibility.Director handles", man.HandleRequest(9999));
+		assertEquals("issa.w6.college.chainOfResponsibility.President handles", man.HandleRequest(99999));
+		assertEquals("issa.w6.college.chainOfResponsibility.Emporer handles", man.HandleRequest(9999999));
+		assertEquals("issa.w6.college.chainOfResponsibility.Emporer handles", man.HandleRequest(Integer.MAX_VALUE));
 	}
 }
