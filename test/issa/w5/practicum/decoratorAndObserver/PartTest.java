@@ -44,6 +44,6 @@ public class PartTest {
 		System.out.println("Rack");
 		instance = new Rack(instance);
 		String expResult = "";
-		assertEquals("fiets met bagagedrager", instance.toString());
+		assertEquals("(frame, twee wielen, stuur, rem, zadel en ketting €250.0 Kg: 15.0){(bagagedrager €270.5 Kg: 16.5)}", instance.toString());
 	}
 }

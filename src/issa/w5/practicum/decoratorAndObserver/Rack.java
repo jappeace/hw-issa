@@ -14,7 +14,7 @@ public class Rack extends ExtraPart{
 	}
 	@Override
 	public String getParts() {
-		return super.getParts()+" bagagedrager";
+		return super.getParts()+"bagagedrager";
 	}
 
 	@Override

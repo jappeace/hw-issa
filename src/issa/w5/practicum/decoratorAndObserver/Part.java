@@ -14,6 +14,6 @@ public abstract class  Part {
 	public abstract Double getWeight();
 	
 	public String toString(){
-		return "(" + getParts() + "Prijs: "+ getPrice() + "Gewicht: "+ getWeight() +")";
+		return "(" + getParts() + " €"+ getPrice() + " Kg: "+ getWeight() +")";
 	}
 }

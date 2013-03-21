@@ -33,7 +33,6 @@ public class ExtraPart extends Part{
 	@Override
 	public String toString(){
 		String parent = _parent.toString();
-		int cutoffsize = 1, cutoffLength = parent.length()-cutoffsize;
-		return parent +"{"+ super.toString().replace(parent, "") +"}";
+		return parent +"{"+ super.toString().replace(_parent.getParts(), "") +"}";
 	}
 }
